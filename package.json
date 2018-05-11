@@ -1,6 +1,6 @@
 {
   "name": "honeypot",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -10,8 +10,34 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.15.5",
-    "jade": "~1.11.0",
+    "jade": "^1.11.0",
     "morgan": "~1.9.0",
     "serve-favicon": "~2.4.5"
-  }
+  },
+  "description": "Our CS360 HoneyPot Money Sharing Susu App",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NaturalCarr/HoneyPot.git"
+  },
+  "keywords": [
+    "Honey",
+    "Pot",
+    "HoneyPot",
+    "Susu",
+    "Money",
+    "Sharing",
+    "App",
+    "Web",
+    "Social",
+    "Finances",
+    "Finance",
+    "Financial"
+  ],
+  "author": "MEC Spring 2018 - CS360 Team 2 - Natural, Ricardo, Bilikes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NaturalCarr/HoneyPot/issues"
+  },
+  "homepage": "https://github.com/NaturalCarr/HoneyPot#readme"
 }
