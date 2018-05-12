@@ -1,5 +1,19 @@
 extends layout
-
 block content
-  h1= title
-  p Welcome to #{title}
+  link(rel='stylesheet', href='/stylesheets/index.css')
+  div(class="outer")
+   div(class="middle")
+    div(class="inner")
+     div(class='logo')
+     div(class='login_box' id="login_box")
+      form(id='signin' method='POST' action='/')
+       input(class="usnp" type="text" placeholder="Username" name="username")
+       br
+       input(class="usnp" type="password" placeholder="Password" name="password")
+       br
+       input(type="submit" id="login" value="Log In")
+      div(class="signup_forgot")
+       form(id="signup" method="GET" action="/register")
+        input(type="submit" value="Sign Up")
+       form(id="forgot" method="GET" action="/recover")
+        input(type="submit" value="Forgot Pass")

@@ -1,6 +1,16 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("/images/bg.jpg");
+}
+div.logo{
+  background-image: url("/images/logo.png");
+  background-size: 480.5px 108.5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+  height: 100px;
+  width: 75%;
 }
 
 a {

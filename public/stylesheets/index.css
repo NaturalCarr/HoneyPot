@@ -1,0 +1,97 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("/images/bg.jpg");
+}
+
+
+
+/*---------------------------------[Login Box]--------------------------------*/
+
+
+/**********************************\
+Login Box Centering
+\**********************************/
+.outer {
+  display: table;
+  position: absolute;
+  height: 80%;
+  width: 95%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  /*whatever width you want*/
+}
+
+/**********************************\
+Login Box Formatting
+\**********************************/
+.login_box{
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+.login_box input {
+  width: 12.5%;
+  margin: auto;
+  padding: 15px;
+  border: 0px;
+  box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   text-align: center;
+}
+
+/**********************************\
+Login Box Coloring
+\**********************************/
+.login_box input[type=text]{
+  background-color: #ffd800;
+}
+.login_box input[type=password]{
+  background-color: #ffd800;
+}
+
+.login_box input:focus {
+  outline: none;
+}
+
+.login_box #login{
+  background-color: #ffa72d;
+}
+
+.login_box #login:focus{
+  outline: dotted;
+}
+/*---------------------------------[Signup/Forgot]--------------------------------*/
+
+.signup_forgot input{
+  background-color: #404040;
+  color: white;
+}
+a {
+  color: #00B7FF;
+}

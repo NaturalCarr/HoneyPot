@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    link(rel='stylesheet', href='/stylesheets/registration.css')
+    div(class="outer")
+        div(class="middle")
+            div(class="inner")
+                div(class="logo")
+                div(class="regform" id="regform")
+                    h1 Registration
+                    form(class="regform" method="POST" action='/register')
+                        span Firstname:&nbsp;
+                        input(class="regfield" type="text" placeholder="John/Jane" name="firstname" id="firstname")
+                        br
+                        span Lastname:&nbsp;
+                        input(class="regfield" type="text" placeholder="Doe" name="lastname" id="lastname")
+                        br
+                        span Username:&nbsp;
+                        input(class="regfield" type="text" placeholder="Username" name="username" id="username")
+                        br
+                        span Password:&nbsp;
+                        input(class="regfield" type="text" placeholder="Password" name="password" id="password")
+                        br
+                        span Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        input(class="regfield" type="text" placeholder="Email Address" name="email" id="email")
+                        br
+                        span &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        input(class="submit" type="submit" value="Register" name="register")
