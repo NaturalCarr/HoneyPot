@@ -21,7 +21,7 @@ router.post('/', function(req, res, next) {
   var widgen = null;
   var widretr = [];
   var temp = null;
-  var sweetalert = false;
+  var sweetalert = true;
 
 
   check_input(sweetalert, usn, usp, fnm, lsn, eml);
