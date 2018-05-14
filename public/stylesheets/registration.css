@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white;
   background-image: url("/images/bg.jpg");
 }
 
@@ -55,26 +56,10 @@ Registration Formatting
   box-sizing: border-box;
 }
 
-
-::-webkit-input-placeholder {
-   text-align: center;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-   text-align: center;
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-   text-align: center;
-}
-
-:-ms-input-placeholder {
-   text-align: center;
-}
-
 /**********************************\
 Registration Coloring
 \**********************************/
+
 .regform input[type=text]{
   background-color: #ffd800;
 }
@@ -92,5 +77,33 @@ Registration Coloring
 
 .regform input:focus {
   outline: none;
-  background-color: #ffa72d;
+  background-color: #642F00;
+}
 
+.regform input[type=submit]:focus{
+  background-color: #ffa72d;
+}
+
+/**********************************\
+WebKit  Placeholder stuff
+\**********************************/
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   text-align: center;
+}
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */

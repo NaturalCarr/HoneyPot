@@ -20,10 +20,30 @@ router.post('/', function(req, res, next) {
     var widgen = null;
     var widretr = [];
     var temp = null;
-    //This if-statment can probably be truncated some how, I don't feel like figuring out how, will do when I get more hot tea.
-
+    
+    //This if-statment can probably be shortened, but this typing should take a while and what else am I going to do on a Sunday night?
+    if (usn == null || usn === '0' || usn == [] || usn == "" || usn === null){
+      
+    }
+    else if (usp == null || usp === '0' || usp == [] || usp == "" || usp === null){
+      res.status(401);
+      res.render('invalid', {message:""});
+    }
+    else if (fnm == null || fnm === '0' || fnm == [] || fnm == "" || fnm === null){
+      res.status(401);
+      res.render('invalid', {message:""});
+    }
+    else if (lsn == null || lsn === '0' || lsn == [] || lsn == "" || lsn === null){
+      res.status(401);
+      res.render('invalid', {message:""});
+    }
+    else if (eml == null || eml === '0' || eml == [] || eml == "" || eml === null){
+      res.status(401);
+      res.render('invalid', {message:""});
+    }
+    else{
     usernamecheck();
-
+  }
     function usernamecheck() {
         temp = null;
         let honeypot = new sqlite3.Database('./database/HoneyPot.db', (err) => {
