@@ -2,27 +2,27 @@ extends layout
 
 block content
     link(rel='stylesheet', href='/stylesheets/registration.css')
-    div(class="outer")
-        div(class="middle")
-            div(class="inner")
-                div(class="logo")
-                div(class="regform" id="regform")
-                    h1 Registration
+    .outer
+        .middle
+            .inner
+                .logo
+                .regformdiv#regform
                     form(class="regform" method="POST" action='/register')
-                        span Firstname:&nbsp;
-                        input(class="regfield" type="text" placeholder="John/Jane" name="firstname" id="firstname")
+                        h1 Registration
+                        //span &nbsp;
+                        input(class="regfield" type="text" placeholder="First Name" name="firstname" id="firstname")
                         br
-                        span Lastname:&nbsp;
-                        input(class="regfield" type="text" placeholder="Doe" name="lastname" id="lastname")
+                        //span &nbsp;
+                        input(class="regfield" type="text" placeholder="Last Name" name="lastname" id="lastname")
                         br
-                        span Username:&nbsp;
+                        //span &nbsp;&nbsp;
                         input(class="regfield" type="text" placeholder="Username" name="username" id="username")
                         br
-                        span Password:&nbsp;
+                        //span &nbsp;
                         input(class="regfield" type="password" placeholder="Password" name="password" id="password")
                         br
-                        span Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        //span &nbsp;
                         input(class="regfield" type="text" placeholder="Email Address" name="email" id="email")
                         br
-                        span &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        //span &nbsp;
                         input(class="submit" type="submit" value="Register" name="register")

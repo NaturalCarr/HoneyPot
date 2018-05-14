@@ -45,7 +45,7 @@ router.post('/', function(req, res, next) {
       if (temp == null || temp === '0' || temp == [] || temp == "" || temp === null) {
         console.log ('Failed Login Attempt | Username: ' + usn + ' Password: ' + usp);
         res.status(401);
-        res.send('Invalid Username and/or Password, Login Attempt Logged');
+        res.render('invalid', {message: 'Invalid Username and/or Password, Login Attempt Logged'});
     }
     else if (usp == temp) { //This is the success condition
       res.render('homepage', { title: 'HoneyPot - Save For Tomorrow' });
@@ -53,7 +53,7 @@ router.post('/', function(req, res, next) {
     else {
       console.log ('Failed Login Attempt | Username: ' + usn + ' Password: ' + usp);
       res.status(401);
-      res.send('Invalid Username and/or Password, Login Attempt Logged');
+      res.render('invalid', {message: 'Invalid Username and/or Password, Login Attempt Logged'});
     }
     console.log('Close The Database Connection');
     });

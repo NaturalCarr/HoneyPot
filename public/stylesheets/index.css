@@ -9,27 +9,7 @@ body {
 /*---------------------------------[Login Box]--------------------------------*/
 
 
-/**********************************\
-Login Box Centering
-\**********************************/
-.outer {
-  display: table;
-  position: absolute;
-  height: 80%;
-  width: 95%;
-}
 
-.middle {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.inner {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  /*whatever width you want*/
-}
 
 /**********************************\
 Login Box Formatting
@@ -42,7 +22,7 @@ Login Box Formatting
 }
 
 .login_box input {
-  width: 12.5%;
+  width: 16%;
   margin: auto;
   padding: 15px;
   border: 0px;
@@ -83,9 +63,14 @@ Login Box Coloring
   background-color: #ffa72d;
 }
 
+/**********************************\
+Overall Form Coloring
+\***********************************/
 .login_box #login:focus{
-  outline: dotted;
+  background-image: url("/images/bg.jpg");
 }
+
+
 /*---------------------------------[Signup/Forgot]--------------------------------*/
 
 .signup_forgot input{

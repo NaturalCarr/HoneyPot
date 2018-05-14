@@ -41,21 +41,20 @@ Registration Formatting
   color: white;
 }
 
-#username{
-  margin-left: -3px;
-}
+
 .regform span{
   border: 0px;
   padding: 15px;
 
 }
 .regform input {
-  width: 12.5%;
+  width: 16%;
   margin: auto;
   padding: 15px;
   border: 0px;
   box-sizing: border-box;
 }
+
 
 ::-webkit-input-placeholder {
    text-align: center;
@@ -83,8 +82,15 @@ Registration Coloring
   background-color: #ffd800;
 }
 
+.regform input[type=submit]{
+  background-color: #ffa72d;
+}
+
+.regform input:hover{
+
+}
+
 .regform input:focus {
   outline: none;
   background-color: #ffa72d;
-}
 
