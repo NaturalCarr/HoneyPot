@@ -38,37 +38,44 @@ router.post('/', function(req, res, next) {
           if (usn == null || usn === '0' || usn == [] || usn == "" || usn === null) {
             invalid = true;
             res.render('invalid', {
-              message: "Username cannot be empty"
+              message: "Username cannot be empty",
+              return: "/register"
             });
           } else if (usp == null || usp === '0' || usp == [] || usp == "" || usp === null) {
             res.status(401);
             res.render('invalid', {
-              message: "Password cannot be empty"
+              message: "Password cannot be empty",
+              return: "/register"
             });
           } else if (fnm == null || fnm === '0' || fnm == [] || fnm == "" || fnm === null) {
             res.status(401);
             res.render('invalid', {
-              message: "Firstname cannot be empty"
+              message: "Firstname cannot be empty",
+              return: "/register"
             });
           } else if (lsn == null || lsn === '0' || lsn == [] || lsn == "" || lsn === null) {
             res.status(401);
             res.render('invalid', {
-              message: "Lastname cannot be empty"
+              message: "Lastname cannot be empty",
+              return: "/register"
             });
           } else if (eml == null || eml === '0' || eml == [] || eml == "" || eml === null) {
             res.status(401);
             res.render('invalid', {
-              message: "Email cannot be empty"
+              message: "Email cannot be empty",
+              return: "/register"
             });
           } else if (usn == usp) {
             res.status(401);
             res.render('invalid', {
-              message: "Password and Username cannot be the same"
+              message: "Password and Username cannot be the same",
+              return: "/register"
             });
           } else if (usp == fnm || usp == lsn || usp == fnm + lsn || usp == lsn + fnm) {
             res.status(401);
             res.render('invalid', {
-              message: "Password cannot be your name"
+              message: "Password cannot be your name",
+              return: "/register"
             });
           } else {
             check_username_existence();

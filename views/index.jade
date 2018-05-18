@@ -1,6 +1,9 @@
 extends layout
 block content
   link(rel='stylesheet', href='/stylesheets/index.css')
+  script(src="https://unpkg.com/sweetalert/dist/sweetalert.min.js")
+  script 
+    != swal
   .outer
    .middle
     .inner
@@ -19,3 +22,12 @@ block content
             input(type="submit" value="Sign Up")
           form(id="forgot" method="GET" action="/recover")
             input(type="submit" value="Forgot Pass")
+  .bottom
+    ul
+      li
+        a(href="/aboutus")
+          p About Us
+      li
+        a(href="/EULA")
+          p EULA
+      li     

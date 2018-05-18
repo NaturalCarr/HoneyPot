@@ -80,3 +80,19 @@ Overall Form Coloring
 a {
   color: #00B7FF;
 }
+
+.bottom{
+position: fixed;
+bottom:0;
+width: 100%;
+text-align:center;
+}
+
+.bottom ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+}
+.bottom li{
+  display: inline;
+}
