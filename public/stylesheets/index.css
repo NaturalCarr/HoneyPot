@@ -92,7 +92,10 @@ text-align:center;
   list-style-type: none;
   margin: 0;
   padding: 0px;
+  text-align: center;
 }
 .bottom li{
   display: inline-block;
+  text-align: center;
+  margin-left: -80px;
 }
