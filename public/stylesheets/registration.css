@@ -1,0 +1,109 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white;
+  background-image: url("/images/bg.jpg");
+}
+
+
+
+
+
+
+/**********************************\
+Registration Box Centering
+\**********************************/
+.outer {
+  display: table;
+  position: absolute;
+  height: 80%;
+  width: 95%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  /*whatever width you want*/
+}
+
+/**********************************\
+Registration Formatting
+\**********************************/
+.regform{
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+
+.regform span{
+  border: 0px;
+  padding: 15px;
+
+}
+.regform input {
+  width: 16%;
+  margin: auto;
+  padding: 15px;
+  border: 0px;
+  box-sizing: border-box;
+}
+
+/**********************************\
+Registration Coloring
+\**********************************/
+
+.regform input[type=text]{
+  background-color: #ffd800;
+}
+.regform input[type=password]{
+  background-color: #ffd800;
+}
+
+.regform input[type=submit]{
+  background-color: #ffa72d;
+}
+
+.regform input:hover{
+
+}
+
+.regform input:focus {
+  outline: none;
+  background-color: #642F00;
+}
+
+.regform input[type=submit]:focus{
+  background-color: #ffa72d;
+}
+
+/**********************************\
+WebKit  Placeholder stuff
+\**********************************/
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   text-align: center;
+}
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */

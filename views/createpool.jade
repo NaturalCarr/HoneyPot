@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    link(rel='stylesheet', href='/stylesheets/createpool.css')
+    script(src="https://unpkg.com/sweetalert/dist/sweetalert.min.js")
+    script 
+        != swal
+    .outer
+        .middle
+            .inner
+                .regformdiv#regform
+                    form(class="regform" method="POST" action='/createpool')
+                        h1 Create a Pool
+                        //span &nbsp;
+                        input(class="formlabel" type="button" value="Pool Name" onClick="")
+                        input(class="forminput" type="text" placeholder="My Pool" id="poolname" name="poolname")
+                        br
+                        input(class="formlabel" type="button" value="Pool Size" onClick="")
+                        input(class="forminput" type="number" min="2" max="30" placeholder="5" name="poolsize")
+                        //span &nbsp;
+                        br
+                        input(class="formlabel" type="button" value="Value (USD)" onClick="")
+                        input(class="forminput" type="number" min="100" max="10000" placeholder="1000" name="poolvalue")
+                        br
+                        input(class="formlabel" type="button" value="Payment Rounds" onClick="")
+                        input(class="forminput" type="number" min="1" max="30" placeholder="1" name="payrounds")
+                        br
+                        input(class="formlabel" type="button" value="Begin Date" onClick="")
+                        input(class="forminput" type="date" name="begindate" min= today placeholder= today)
+                        br
+                        input(class="formlabel" type="button" value="Rating Requirement" onClick="")
+                        input(class="forminput" type="number" min="0" max="5.0" placeholder="0.0" name="ratingrequirement" step="0.1")
+                        br
+                        input(class="submit" type="submit" value="Create Pool" name="submit")

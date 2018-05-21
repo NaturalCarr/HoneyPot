@@ -1,0 +1,98 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("/images/bg.jpg");
+}
+
+
+
+/*---------------------------------[Login Box]--------------------------------*/
+
+
+
+
+/**********************************\
+Login Box Formatting
+\**********************************/
+.login_box{
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+.login_box input {
+  width: 16%;
+  margin: auto;
+  padding: 15px;
+  border: 0px;
+  box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   text-align: center;
+}
+
+/**********************************\
+Login Box Coloring
+\**********************************/
+.login_box input[type=text]{
+  background-color: #ffd800;
+}
+.login_box input[type=password]{
+  background-color: #ffd800;
+}
+
+.login_box input:focus {
+  outline: none;
+}
+
+.login_box #login{
+  background-color: #ffa72d;
+}
+
+/**********************************\
+Overall Form Coloring
+\***********************************/
+.login_box #login:focus{
+  background-image: url("/images/bg.jpg");
+}
+
+
+/*---------------------------------[Signup/Forgot]--------------------------------*/
+
+.signup_forgot input{
+  background-color: #404040;
+  color: white;
+}
+a {
+  color: #00B7FF;
+}
+
+.bottom{
+position: fixed;
+bottom:0;
+width: 100%;
+text-align:center;
+}
+
+.bottom ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+}
+.bottom li{
+  display: inline;
+}

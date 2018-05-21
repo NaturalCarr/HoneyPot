@@ -1,0 +1,83 @@
+ul, ol {
+	list-style-type: none;
+	text-align: center;
+}
+
+.sublist li{
+	width: 100%;
+	margin-left: -20px;
+}
+#mainlist {
+	
+	padding: 0px;
+	margin-top: auto;
+	margin-bottom: auto;
+	text-align: center;
+	height: 400px;
+}
+.main_display{
+	background-color: rgb(0,0,0,0.3);
+	text-align: center;
+	display: inline-block;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 30%;
+	height: 100%;
+}
+.homelabel{
+	border-bottom-color: #FFFFFF;
+	border-bottom-style: solid;
+	border-width: thin;
+	font-family: monospace;
+
+}
+
+.pools{
+	width: 100%;
+	text-align: center;
+	border-color: white;
+	border: 1px solid white;
+}
+
+.pools th{
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align: center;
+}
+
+tr{
+	width: 100%;
+	text-align: center;
+}
+.main_display_div{
+	height: 100%;
+	width: 100%;
+	overflow:scroll;
+	}
+.main_display_div::-webkit-scrollbar { 
+    display: none; 
+}
+
+#NewPools li{
+
+padding:10px;
+border-bottom-style: solid;
+border-collapse: collapse;
+border-color: #ffd800;
+font-family: fantasy;
+}
+
+#NewPools a{
+	color: white;
+	text-decoration: none;
+}
+
+.first-child{
+	border-top-style: solid;
+}
+
+#NewPools li:hover{
+	background-color: rgb(255,255,255,.3);
+}

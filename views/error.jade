@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/index.css')
+  .outer
+    .middle
+        .inner
+            h1= message
+            h2= error.status
+            pre #{error.stack}

@@ -1,0 +1,41 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("/images/bg.jpg");
+}
+div.logo{
+  background-image: url("/images/logo.png");
+  background-size: 480.5px 108.5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+  height: 100px;
+  width: 75%;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/**********************************\
+Box Centering
+\**********************************/
+.outer {
+  display: table;
+  position: absolute;
+  height: 80%;
+  width: 95%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  color: white;
+  text-align: center;
+}

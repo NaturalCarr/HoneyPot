@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	.outer
+		.middle
+			.inner
+				h1= message
+				h2= "Redirecting in 5 seconds"
+				meta(http-equiv="refresh" content="5;url=" return )

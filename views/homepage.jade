@@ -1,0 +1,47 @@
+extends loggedin
+block content
+  link(rel='stylesheet', href='/stylesheets/homepage.css')
+  link(rel='stylesheet', href='/stylesheets/index.css')
+  .outer
+    .middle
+      .inner
+          ul#mainlist
+            li.main_display
+                p.homelabel Your Pools
+                .main_display_div#your_pools
+                        table.pools
+                            tr.labels
+                                th Name
+                                th Value
+                                th Members
+                            each pname, i in pool_name
+                                tr
+                                    td #{pool_name[i]}   
+                                    td $#{pool_total_value[i]}
+                                    td #{member_count[i]} / #{minimum[i]}
+            li.main_display
+                p.homelabel New Pools
+                .main_display_div
+                    ul.sublist#NewPools
+                        a(href="poolsearch")
+                            li.first-child Pool Search
+                        a(href="membersearch")
+                            li Member Search
+                        a(href="createpool")
+                            li Create Pool
+            li.main_display
+                p.homelabel Your Account
+                .main_display_div#youraccount
+                    ul.sublist#useraccount_actions
+                        li
+                            p.hello Hello, #{username}
+                        li
+                            span System Rating #{sysrate} | 
+                            span User Rating #{usrrate}
+                        li 
+                            p Your Wallet
+                        li
+                            form(class="logout" method="get" action='/logout')
+                                input(class="logout_button" type="submit" value="Log Out")
+                            
+   

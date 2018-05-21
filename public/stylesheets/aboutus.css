@@ -1,0 +1,141 @@
+video {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+body {
+	padding: 50px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	background-image: url("/images/bg.jpg");
+}
+
+.what {
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: auto;
+	height: 120px;
+	width: 600px;
+}
+
+a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+p {
+	margin: 0px;
+	color: #FFFFFF;
+}
+
+/**********************************\
+Box Centering and Formatting
+\**********************************/
+
+.outer {
+	display: table;
+	position: absolute;
+	height: 80%;
+	width: 95%;
+}
+
+.middle {
+	display: table-cell;
+	vertical-align: top
+}
+
+.inner {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+
+/**********************************\
+Explanation Elements
+\**********************************/
+
+.explanation_video {
+	background-color: rgba(0, 0, 0, .3);
+	border-color: #ffffff;
+	//border-top-style: solid;
+	border-bottom-style: solid;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	width: 600px;
+	height: 350px;
+}
+
+.explanation_text {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 600px;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.explanation_text p {
+	font-size: 20px;
+	border-color: rgba(0, 0, 0, 0);
+	border-left-style: solid;
+	border-right-style: solid;
+	border-width: 21px;
+}
+
+/**********************************\
+Team Elements
+\**********************************/
+
+.the_team {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 600px;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#our_team {
+	width: 400px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.the_team #desc {
+	margin-top: 3px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.the_team img {
+	margin: 0px;
+	display: inline-block;
+}
+
+.the_team li {
+	display: inline;
+	list-style-type: none;
+	padding: 0px;
+}
+
+.teampics {
+	text-align: center;
+}
+
+.teampics img {
+	width: 175;
+	height: 175;
+	border-radius: 50%
+}
+
+.tpdiv {
+	width: 33%;
+	padding: 10px;
+	display: inline-block;
+	box-sizing: border-box;
+}
+
