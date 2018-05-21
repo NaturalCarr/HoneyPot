@@ -20,6 +20,8 @@ router.get('/', function(req, res, next) {
 		var userrate = "";
 		var totalpay = [""];
 		var seg = [""];
+		var walletid = "";
+		var walletvalue = "";
 		data_pull_pool();
 		req.session.lastpage = "/homepage";
 	}
@@ -39,7 +41,7 @@ router.get('/', function(req, res, next) {
   });
 
   honeypot.serialize(() => {
-    honeypot.each("SELECT USERS.systrate as sysr, USERS.userate as userr, Pool.PoolID as pid, pool.RATE_REQ as rreq, pool.REC_DEAD as recd, pool.REC_MIN as min, pool.POOL_STAGE as mode, pool.PAY_OUT_AMOUNT as poa, pool. PAY_OUT_ROUNDS as por, pool.PAY_IN_AMOUNT as pia, pool.PAY_IN_ROUNDS as pir, pool.POOL_CREATOR as origin, pool.POOL_NAME as pname, count(DISTINCT poolmembers.username) as memcount FROM POOL, POOLMEMBERS, USERS WHERE Pool.PoolID = PoolMembers.PoolID AND USERS.USERNAME = Poolmembers.username AND Poolmembers.username ='" + req.session.username +"' GROUP BY poolmembers.poolid;", (err, row) => {
+    honeypot.each("SELECT USERS.systrate as sysr, USERS.userate as userr, Pool.PoolID as pid, pool.RATE_REQ as rreq, pool.REC_DEAD as recd, pool.REC_MIN as min, pool.POOL_STAGE as mode, pool.PAY_OUT_AMOUNT as poa, pool. PAY_OUT_ROUNDS as por, pool.PAY_IN_AMOUNT as pia, pool.PAY_IN_ROUNDS as pir, pool.POOL_CREATOR as origin, pool.POOL_NAME as pname, count(DISTINCT poolmembers.username) as memcount, Wallet.WalletID as wid, wallet.value_usd as value FROM POOL, POOLMEMBERS, USERS, Wallet WHERE Pool.PoolID = PoolMembers.PoolID AND Wallet.WalletID = Users.WalletID AND USERS.USERNAME = Poolmembers.username AND Poolmembers.username ='" + req.session.username +"' GROUP BY poolmembers.poolid;", (err, row) => {
       if (err) { console.error(err.message);}
       poolid[iter] = row.pid;
       poolname[iter]= row.pname;
@@ -54,6 +56,8 @@ router.get('/', function(req, res, next) {
       ratingreq[iter]= row.rreq;
       systrate = row.sysr;
       userrate = row.userr;
+      walletid = row.wid;
+      walletvalue = row.value;
       seg[iter]= (row.poa / row.por);
       //console.log(row.id + "\t" + row.name);
       console.log(poolname[iter]);
@@ -81,7 +85,9 @@ router.get('/', function(req, res, next) {
 			username: req.session.username,
 			usrrate: userrate,
 			sysrate: systrate,
-			segp: seg
+			segp: seg,
+			walletid: walletid,
+			val: walletvalue
 		});
     console.log('Close The Database Connection');
   });

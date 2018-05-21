@@ -34,8 +34,6 @@ block content
                 p.homelabel New Pools
                 .main_display_div
                     ul.sublist#NewPools
-                        a(href="poolsearch")
-                            li.first-child Pool Search
                         a(href="membersearch")
                             li Member Search
                         a(href="createpool")
@@ -46,11 +44,10 @@ block content
                     ul.sublist#useraccount_actions
                         li
                             p.hello Hello, #{username}
-                        li
-                            span System Rating #{sysrate} | 
-                            span User Rating #{usrrate}
                         li 
                             p Your Wallet
+                            p Value: $#{val} USD
+                            p ID: #{walletid}
                         li
                             form(class="logout" method="get" action='/logout')
                                 input(class="logout_button" type="submit" value="Log Out")
