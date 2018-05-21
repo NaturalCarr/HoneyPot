@@ -1,0 +1,27 @@
+extends layout
+
+block content
+	link(rel='stylesheet', href='/stylesheets/membersearch.css')
+	.outer
+		.middle
+			.inner
+				.searchform
+					form(class="membersearch" method="POST" action="/membersearch")
+						h1 Member Search
+						h3 Please Enter Either Their Username, Email, or Unique ID
+						input(type="radio" name="sel" checked value ="usn")
+						input(class="searchfield" type="text" name="username" placeholder="Username")
+						br
+						input(type="radio" name="sel" value="uem")
+						input(class="searchfield" type="text" name="email" placeholder="Email")
+						br
+						input(type="radio" name="sel" value="uip")
+						input(class="searchfield" type="text" name="ID" placeholder="ID")
+						br
+						input(class="submit" type="submit" value="Search")
+					br
+					br
+					#{membername}
+					#{memberemail}
+					#{memberid}
+				

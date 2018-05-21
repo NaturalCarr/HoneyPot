@@ -9,16 +9,27 @@ block content
             li.main_display
                 p.homelabel Your Pools
                 .main_display_div#your_pools
-                        table.pools
-                            tr.labels
-                                th Name
-                                th Value
-                                th Members
+                        tr.labels
                             each pname, i in pool_name
-                                tr
-                                    td #{pool_name[i]}   
-                                    td $#{pool_total_value[i]}
-                                    td #{member_count[i]} / #{minimum[i]}
+                                table.pools
+                                    tr
+                                        th Name
+                                        th Total Value
+                                        th Members
+                                    tr
+                                        td #{pool_name[i]}   
+                                        td $#{pool_total_value[i]}
+                                        td #{member_count[i]} of #{minimum[i]}
+                                    tr
+                                        th Rating Req
+                                        th Segment Value
+                                        th Segemnt Count
+                                    tr
+                                        td #{rating[i]}
+                                        td $#{segp[i]}
+                                        td #{payout_r[i]}
+
+
             li.main_display
                 p.homelabel New Pools
                 .main_display_div

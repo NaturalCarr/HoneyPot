@@ -94,5 +94,5 @@ text-align:center;
   padding: 0px;
 }
 .bottom li{
-  display: inline;
+  display: inline-block;
 }
